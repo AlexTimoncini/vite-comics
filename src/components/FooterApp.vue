@@ -3,7 +3,7 @@
     export default{
         name: 'FooterApp',
         components: {
-            MainNavList,
+            FooterNavList,
         }
     }
 </script>
