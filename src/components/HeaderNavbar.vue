@@ -67,7 +67,7 @@
                 <img src="../assets/img/dc-logo.png" alt="dc logo">
             </div>
             <ul class="ivy_nav_items">
-                <li class="ivy_item" v-for="item in navbarItems">
+                <li class="ivy_item" v-for="item in navbarItems" :class="item.active ? 'ivy_active' : ''">
                     <a :href="item.link">{{ item.name }}</a>
                 </li>
             </ul>
@@ -86,13 +86,25 @@
             .ivy_nav_items{
                 @include flex();
                 height: 100%;
-                .ivy_item a{
-                    font-size: 1.1rem;
-                    color: $secFontColor;
-                    text-transform: uppercase;
-                    font-weight: bold;
+
+                .ivy_item{
                     margin: 0 1rem;
+                    padding-bottom: 1rem;
+                    a{
+                        font-size: 1.1rem;
+                        color: $secFontColor;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }                   
                 }
+
+                .ivy_item.ivy_active{
+                        border-bottom: 3px solid $logoColor;
+
+                        a{
+                            color: $logoColor;
+                        }
+                    }
             }
         }
     }
