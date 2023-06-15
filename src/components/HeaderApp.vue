@@ -1,17 +1,16 @@
 <script>
+    import HeaderNavbar from './HeaderNavbar.vue';
     export default{
-        name: 'HeaderApp'
+        name: 'HeaderApp',
+        components: {
+            HeaderNavbar,
+        }
     }
 </script>
 
 <template>
     <header>
-        <div class="ivy_container">
-
-        </div>
-        <div class="ivy_container">
-            
-        </div>
+        <HeaderNavbar />
     </header>
 </template>
 
