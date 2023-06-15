@@ -3,7 +3,128 @@
         name: 'FooterNavList',
         data(){
             return{
-
+                navbarLists: [
+                    {
+                        title: 'dc comics',
+                        navbarList: [
+                            {
+                                name: 'Characters',
+                                link: '#'
+                            },
+                            {
+                                name: 'Comics',
+                                link: '#'
+                            },
+                            {
+                                name: 'Movies',
+                                link: '#'
+                            },
+                            {
+                                name: 'TV',
+                                link: '#'
+                            },
+                            {
+                                name: 'Games',
+                                link: '#'
+                            },
+                            {
+                                name: 'Videos',
+                                link: '#'
+                            },
+                            {
+                                name: 'News',
+                                link: '#'
+                            },
+                        ]
+                    },
+                    {
+                        title: 'shop',
+                        navbarList: [
+                            {
+                                name: 'Shop DC',
+                                link: '#'
+                            },
+                            {
+                                name: 'Shop DC Collectibles',
+                                link: '#'
+                            },
+                        ]
+                    },
+                    {
+                        title: 'dc',
+                        navbarList: [
+                            {
+                                name: 'Term Of Use',
+                                link: '#'
+                            },
+                            {
+                                name: 'Privacy policy (New)',
+                                link: '#'
+                            },
+                            {
+                                name: 'Ad Choices',
+                                link: '#'
+                            },
+                            {
+                                name: 'Advertising',
+                                link: '#'
+                            },
+                            {
+                                name: 'Jobs',
+                                link: '#'
+                            },
+                            {
+                                name: 'Subscriptions',
+                                link: '#'
+                            },
+                            {
+                                name: 'Talent Workshops',
+                                link: '#'
+                            },
+                            {
+                                name: 'CPSC Certificates',
+                                link: '#'
+                            },
+                            {
+                                name: 'Ratings',
+                                link: '#'
+                            },
+                            {
+                                name: 'Shop Help',
+                                link: '#'
+                            },
+                            {
+                                name: 'Contact Us',
+                                link: '#'
+                            },
+                        ]
+                    },
+                    {
+                        title: 'sites',
+                        navbarList: [
+                            {
+                                name: 'DC',
+                                link: '#'
+                            },
+                            {
+                                name: 'MAD Magazines',
+                                link: '#'
+                            },
+                            {
+                                name: 'DC Kids',
+                                link: '#'
+                            },
+                            {
+                                name: 'DC Universe',
+                                link: '#'
+                            },
+                            {
+                                name: 'DC Power Visa',
+                                link: '#'
+                            },
+                        ]
+                    },
+                ]
             }
         }
     }
@@ -12,7 +133,14 @@
 <template>
     <nav>
         <div class="ivy_container">
-
+            <div class="ivy_navbar_lists">
+                <ul class="ivy_navbar_list" v-for="list in navbarLists">
+                    <h1 class="ivy_navbar_title">{{ list.title }}</h1>
+                    <li class="ivy_navbar_item" v-for="item in list.navbarList">
+                        <a href="{{ item.link }}">item.name</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </template>
@@ -22,5 +150,6 @@
     @use '../styles/partials/variables' as *;
     nav{
         background-image: url('../assets/img/footer-bg.jpg');
+        
     }
 </style>
