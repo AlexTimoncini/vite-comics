@@ -137,7 +137,7 @@
                 <ul class="ivy_navbar_list" v-for="list in navbarLists">
                     <h1 class="ivy_navbar_title">{{ list.title }}</h1>
                     <li class="ivy_navbar_item" v-for="item in list.navbarList">
-                        <a href="{{ item.link }}">{{ item.name }}</a>
+                        <a :href="item.link">{{ item.name }}</a>
                     </li>
                 </ul>
             </div>
