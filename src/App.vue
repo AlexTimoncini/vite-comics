@@ -14,8 +14,8 @@
 
 <template>
   <HeaderApp />
-  <FooterApp />
   <MainApp />
+  <FooterApp />
 </template>
 
 <style lang="scss">
