@@ -1,7 +1,7 @@
 <script>  
   import HeaderApp from './components/HeaderApp.vue';
   import FooterApp from './components/FooterApp.vue';
-  import MainApp from './components/MainApp.vue';
+  import MainApp from './components/mainApp.vue';
   export default{
     name: 'App',
     components: {
